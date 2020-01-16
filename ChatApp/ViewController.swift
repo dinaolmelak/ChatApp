@@ -21,16 +21,42 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) in
             configuration.applicationId = "myAppId"
-            configuration.server = "http://chatappname.herokuapp.com/parse"
+            configuration.server = "https://chatappname.herokuapp.com/parse"
         }))
     }
     @IBAction func didTapLogIn(_ sender: Any) {
-        print("Log in")
         
+        if usernameLabel.text == nil || passwordLabel.text == nil || usernameLabel.text == "" || passwordLabel.text == "" {
+            print("Something empty")
+        }else{
+            PFUser.logInWithUsername(inBackground: usernameLabel.text!, password: passwordLabel.text!) { (pfUser, error) in
+                if error != nil{
+                    print("something went wrong when signing in")
+                } else{
+                    print("Success!")
+                    print("Log in")
+                    self.performSegue(withIdentifier: "UserSegue", sender: self)
+                }
+            }
+        }
     }
     @IBAction func didTapSignUp(_ sender: Any) {
         
-        print("Sign UP")
+        if usernameLabel.text == nil || passwordLabel.text == nil || usernameLabel.text == "" || passwordLabel.text == "" {
+            print("Something empty")
+        } else{
+            let user = PFUser()
+            user.username = usernameLabel.text!
+            user.password = passwordLabel.text!
+            user.signUpInBackground { (success, error) in
+                if error != nil{
+                    print("failed sign up")
+                } else{
+                    print("Signed Up")
+                    self.performSegue(withIdentifier: "UserSegue", sender: self)
+                }
+            }
+        }
     }
     @IBAction func didDragCart(_ sender: UIPanGestureRecognizer) {
         let location = sender.location(in: view)

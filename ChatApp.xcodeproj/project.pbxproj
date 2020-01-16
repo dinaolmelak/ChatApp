@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6195B25623D1115600A0442F /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6195B25523D1115600A0442F /* ChatCell.swift */; };
+		6195B25823D116E300A0442F /* SendTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6195B25723D116E300A0442F /* SendTextViewController.swift */; };
 		61B59DFB237A0CCC00D93741 /* SignedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B59DFA237A0CCC00D93741 /* SignedInViewController.swift */; };
 		61CB29162379DA8D00F373C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB29152379DA8D00F373C4 /* AppDelegate.swift */; };
 		61CB29182379DA8D00F373C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB29172379DA8D00F373C4 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6195B25523D1115600A0442F /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		6195B25723D116E300A0442F /* SendTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTextViewController.swift; sourceTree = "<group>"; };
 		61B59DFA237A0CCC00D93741 /* SignedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewController.swift; sourceTree = "<group>"; };
 		61CB29122379DA8D00F373C4 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61CB29152379DA8D00F373C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				61CB291E2379DA8E00F373C4 /* LaunchScreen.storyboard */,
 				61CB29212379DA8E00F373C4 /* Info.plist */,
 				61B59DFA237A0CCC00D93741 /* SignedInViewController.swift */,
+				6195B25523D1115600A0442F /* ChatCell.swift */,
+				6195B25723D116E300A0442F /* SendTextViewController.swift */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -207,7 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				61CB29182379DA8D00F373C4 /* ViewController.swift in Sources */,
+				6195B25623D1115600A0442F /* ChatCell.swift in Sources */,
 				61B59DFB237A0CCC00D93741 /* SignedInViewController.swift in Sources */,
+				6195B25823D116E300A0442F /* SendTextViewController.swift in Sources */,
 				61CB29162379DA8D00F373C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
